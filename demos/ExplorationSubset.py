@@ -50,7 +50,7 @@ assert os.path.isdir(msd_code_path),'wrong path' # sanity check
 sys.path.append( os.path.join(msd_code_path,'PythonSrc') )
 
 # imports specific to the MSD
-from lib import hdf5_getters as GETTERS
+from script import hdf5_getters as GETTERS
 
 
 # the following function simply gives us a nice string for

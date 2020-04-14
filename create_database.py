@@ -1,5 +1,6 @@
 import pandas as pd
-from lib import hdf5_getters
+from script import hdf5_getters
+
 
 def get_song_fiels(path):
     '''
@@ -15,19 +16,19 @@ def get_song_fiels(path):
     meta_song = file.get("metadata/songs").iloc[0]
     analysis_song = file.get("analysis/songs").iloc[0]
     year = file.get("musicbrainz/songs").iloc[0]
+    # TODO --> There're many useless attributes now (Idx_sections_confidence, ...)
 
     # TODO --> The others are array (not table). How to handle those?
-    # TODO --> There're many useless attributes now (Idx_sections_confidence, ...)
-    #similar_art = file.get("analysis/bars_start")
-
+    # similar_art = file.get("analysis/bars_start")
 
     # Close reading process
     file.close()
 
-    #Merge the series
+    # Merge the series
     song = pd.concat([meta_song, year, analysis_song])
 
     return song
+
 
 # ---------------------------------------------------
 root = "/Users/marco/Documents/MillionSongSubset/data"

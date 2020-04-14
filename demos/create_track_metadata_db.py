@@ -237,7 +237,7 @@ if __name__ == '__main__':
     # http://codeoffsets.com/
 
     path = os.getcwd()
-    sys.path.append(path + "/lib")
+    sys.path.append(path + "/script")
     from hdf5_getters import *
 
     verbose = 0

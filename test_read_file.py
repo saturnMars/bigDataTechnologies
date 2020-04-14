@@ -1,10 +1,8 @@
 import pandas as pd
-from lib import hdf5_getters
+from script import hdf5_getters
 
 # Try Hdf5_getters file
 def getSongName(path):
-
-
     h5 = hdf5_getters.open_h5_file_read(path)
     songName = hdf5_getters.get_title(h5)
     h5.close()
