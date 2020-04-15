@@ -104,4 +104,4 @@ ROOT_FOLDER = "/Users/marco/Documents/MillionSongSubset/data"
 
 # CREATE DATABASE - Pandas DataFrame
 song_database = fetch_all_songs(ROOT_FOLDER)
-print(song_database, "\n Load completed")
+print(song_database, "\n A) Load completed")
