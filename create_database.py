@@ -92,10 +92,10 @@ def fetch_all_songs(root_folder, num_song=100):
     songPath = utils.get_all_files(root_folder)[:num_song]
 
     # Retrieve all songs
-    for file in songPath:
+    for i, file in enumerate(songPath):
         song = get_song_fields(file)
         database = database.append(song, ignore_index=True)
-
+        print("(", i, ") LOADED -->", file)
     return database
 
 
@@ -103,5 +103,6 @@ def fetch_all_songs(root_folder, num_song=100):
 ROOT_FOLDER = "/Users/marco/Documents/MillionSongSubset/data"
 
 # CREATE DATABASE - Pandas DataFrame
+print("Start loading...")
 song_database = fetch_all_songs(ROOT_FOLDER)
-print(song_database, "\n A) Load completed")
+print("\n", song_database, "\nA) Load completed")
