@@ -84,7 +84,7 @@ def apply_to_all_files(basedir,func=lambda x: x,ext='.h5'):
     return cnt
 
 # we can now easily count the number of files in the dataset
-print 'number of song files:',apply_to_all_files(msd_subset_data_path)
+print('number of song files:',apply_to_all_files(msd_subset_data_path))
 
 # let's now get all artist names in a set(). One nice property:
 # if we enter many times the same artist, only one will be kept.
@@ -108,15 +108,15 @@ def func_to_get_artist_name(filename):
 t1 = time.time()
 apply_to_all_files(msd_subset_data_path,func=func_to_get_artist_name)
 t2 = time.time()
-print 'all artist names extracted in:',strtimedelta(t1,t2)
+print('all artist names extracted in:',strtimedelta(t1,t2))
 
 
 
 
 # let's see some of the content of 'all_artist_names'
-print 'found',len(all_artist_names),'unique artist names'
+print('found',len(all_artist_names),'unique artist names')
 for k in range(5):
-    print list(all_artist_names)[k]
+    print(list(all_artist_names)[k])
 
 # this is too long, and the work of listing artist names has already
 # been done. Let's redo the same task using an SQLite database.
@@ -130,12 +130,12 @@ t1 = time.time()
 res = conn.execute(q)
 all_artist_names_sqlite = res.fetchall()
 t2 = time.time()
-print 'all artist names extracted (SQLite) in:',strtimedelta(t1,t2)
+print('all artist names extracted (SQLite) in:',strtimedelta(t1,t2))
 # we close the connection to the database
 conn.close()
 # let's see some of the content
 for k in range(5):
-    print all_artist_names_sqlite[k][0]
+    print(all_artist_names_sqlite[k][0])
 
 # now, let's find the artist that has the most songs in the dataset
 # what we want to work with is artist ID, not artist names. Some artists
@@ -149,7 +149,7 @@ conn.close()
 
 # The Echo Nest artist id look like:
 for k in range(4):
-    print all_artist_ids[k]
+    print(all_artist_ids[k])
 
 # let's count the songs from each of these artists.
 # We will do it first by iterating over the dataset.
@@ -178,7 +178,7 @@ apply_to_all_files(msd_subset_data_path,func=func_to_count_artist_id)
 most_pop_aid = sorted(files_per_artist,
                       key=files_per_artist.__getitem__,
                       reverse=True)[0]
-print most_pop_aid,'has',files_per_artist[most_pop_aid],'songs.'
+print(most_pop_aid,'has',files_per_artist[most_pop_aid],'songs.')
 
 # of course, it is more fun to have the name(s) of this artist
 # let's get it using SQLite
@@ -189,8 +189,8 @@ q += " WHERE artist_id='"+most_pop_aid+"'"
 res = conn.execute(q)
 pop_artist_names = map(lambda x: x[0], res.fetchall())
 conn.close()
-print 'SQL query:',q
-print 'name(s) of the most popular artist:',pop_artist_names
+print('SQL query:',q)
+print('name(s) of the most popular artist:',pop_artist_names)
 
 # let's redo all this work in SQLite in a few seconds
 t1 = time.time()
@@ -202,5 +202,5 @@ res = conn.execute(q)
 pop_artists = res.fetchall()
 conn.close()
 t2 = time.time()
-print 'found most popular artist in',strtimedelta(t1,t2)
-print sorted(pop_artists,key=lambda x:x[2],reverse=True)[0]
+print('found most popular artist in',strtimedelta(t1,t2))
+print(sorted(pop_artists,key=lambda x:x[2],reverse=True)[0])

@@ -6,7 +6,7 @@ from script import utils
 def get_song_fields(file_path):
     '''
     Get song's attributes
-    :param path: path of HDF5 file
+    :param file_path: path of HDF5 file
     :return: attributes as Pandas Series
     '''
 
