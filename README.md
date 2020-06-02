@@ -10,7 +10,8 @@ In this project, we suggest a simple **Big Data system to process and analyse th
 1. Create an account of [Databricks (Community)](https://community.cloud.databricks.com/)
 2. [Download](http://static.echonest.com/millionsongsubset_full.tar.gz) the original subset (2.7 GB) from the [Million Song Dataset website](http://millionsongdataset.com/)
 3. Decompress the file (.gz) and upload all the folders into Databricks File System (DBFS)
-4. In the file *"1. Import dataset"* change the variable *"ROOT_FOLDER"* according to your dataset path (default: "/FileStore/tables/songs")
+4. In the file *"1. Import dataset"* change the variable *"ROOT_FOLDER"* according to your dataset path 
+   (default folder: "/FileStore/tables/songs")
 
 # Authors (Group 11)
 ### Marco Bronzini
