@@ -11,7 +11,7 @@ In this project, we suggest a simple **Big Data system to process and analyse th
 2. Import the python notebooks *(import data, explore data* and *clustering)* into your workspace
 3. [Download](http://static.echonest.com/millionsongsubset_full.tar.gz) the original subset (~2 GB) from the [Million Song Dataset website](http://millionsongdataset.com/)
 4. Decompress the file (.gz) and upload all the folders into Databricks File System *(Data > Add Data > Upload File)*
-5. In the file **"1. Import dataset"** change the variable *"ROOT_FOLDER"* according to your dataset path 
+5. In the file **"Import dataset"** change the variable *"ROOT_FOLDER"* according to your dataset path 
     - Default folder: *"/FileStore/tables/songs"*
 
 # Authors (Group 11)
