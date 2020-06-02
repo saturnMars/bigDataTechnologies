@@ -7,7 +7,7 @@ The dataset is about 300 GB large and it contains a collection of audio features
 In this project, we suggest a simple **Big Data system to process and analyse the Million Song Dataset (MSD) using Spark through the handy Databricks platform in its community Edition which is available for free.** After displaying some statistics regarding the dataset, we have focused on creating different types of clusters based on different song attributes.
 
 # Requirements
-1. Create an account of [Databricks [Community]] (https://community.cloud.databricks.com/)
+1. Create an account of [Databricks [Community]](https://community.cloud.databricks.com/)
 2. [Download](http://static.echonest.com/millionsongsubset_full.tar.gz) the Official MSD subset (2.7 GB)
 3. Decompress the file (.gz) and upload all the folders into Databricks File System (DBFS)
 4. In the file *"1. Import dataset"* change the variable *"ROOT_FOLDER"* (default: "/FileStore/tables/songs") according to your dataset path
