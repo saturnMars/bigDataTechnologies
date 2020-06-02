@@ -9,8 +9,8 @@ In this project, we suggest a simple **Big Data system to process and analyse th
 # Requirements
 1. Create an account of Databricks [Community]
 2. [Download](http://static.echonest.com/millionsongsubset_full.tar.gz) the Official MSD subset (2.7 GB)
-3. Decompress the file (.gz) and upload all folders into Databricks File System (DBFS)
-4. In the file "1. Import dataset" change the variable "ROOT_FOLDER" (default: "/FileStore/tables/songs") according to your dataset path
+3. Decompress the file (.gz) and upload all the folders into Databricks File System (DBFS)
+4. In the file *"1. Import dataset"* change the variable *"ROOT_FOLDER"* (default: "/FileStore/tables/songs") according to your dataset path
 
 # Authors (Group 11)
 ### Marco Bronzini
