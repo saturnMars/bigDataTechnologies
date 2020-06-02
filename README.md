@@ -6,7 +6,8 @@ The MSDS is a database of popular songs spanning decades of music. It has been r
 
 In this project, we suggest a simple **Big Data system to process and analyse the Million Song Dataset (MSD) using Spark through the handy Databricks platform in its community Edition which is available for free.** After displaying some statistics regarding the dataset, we have focused on creating different types of clusters based on different song attributes.
 
-# Authors ((Group 11))
+# Authors 
+## __Group 11__
 ### Marco Bronzini
 ### Giacomo Lazzerini 
 
