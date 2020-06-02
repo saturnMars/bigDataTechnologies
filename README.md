@@ -15,6 +15,6 @@ In this project, we suggest a simple **Big Data system to process and analyse th
     - Default folder: *"/FileStore/tables/songs"*
 
 # Authors (Group 11)
-### Bronzini Marco
-### Lazzerini Giacomo
+### - Bronzini Marco
+### - Lazzerini Giacomo
 
